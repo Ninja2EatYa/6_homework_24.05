@@ -5,12 +5,9 @@ from operator import itemgetter
 sorted_students = sorted(students, key=itemgetter(0))
 print(('Студенты:'), sorted_students)
 
-average1 = sum(grades[0]) / len(grades[0])
-average2 = sum(grades[1]) / len(grades[1])
-average3 = sum(grades[2]) / len(grades[2])
-average4 = sum(grades[3]) / len(grades[3])
-average5 = sum(grades[4]) / len(grades[4])
-average = [average1, average2, average3, average4, average5]
+average = {}
+for i in range(0, len(grades)):
+    average[i] = sum(grades[i]) / len(grades[i])
 
 dict_average_score = {}
 for i in range(0, len(grades)):
